@@ -78,3 +78,17 @@ def test_character_and_search(client):
     assert client.get("/api/characters/999").status_code == 404
     assert client.get("/api/search?q=h").status_code == 422
     assert len(client.get("/api/search?q=house").json()["comics"]) == 2
+
+
+def test_roster_without_keys(monkeypatch):
+    monkeypatch.delenv("MARVEL_PUBLIC_KEY", raising=False)
+    body = TestClient(app).get("/api/roster").json()
+    assert body["total_characters"] == 25
+    assert "Not provided by Marvel" in body["source_note"]
+
+
+def test_roster_matching():
+    from app.roster import find_entry
+    assert find_entry("Professor X")["id"] == "char_prof_x"
+    assert find_entry("Kitty Pryde")["id"] == "char_kate_pryde"
+    assert find_entry("Nobody") is None

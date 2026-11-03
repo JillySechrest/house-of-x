@@ -23,6 +23,7 @@ export function Layout({ attribution, children }: { attribution?: Attribution | 
         <nav>
           <Link to="/">Main shelf</Link>
           <Link to="/shelves">Shelves</Link>
+          <Link to="/roster">Roster</Link>
           <Link to="/search">Search</Link>
         </nav>
       </header>

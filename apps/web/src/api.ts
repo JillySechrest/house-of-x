@@ -36,3 +36,10 @@ export function useApi<T>(path: string | null): State<T> {
   }, [path])
   return state.path === path ? state.value : { status: 'loading' }
 }
+
+export interface RosterEntry {
+  id: string; name: string; alias: string; council_seat?: string; role: string
+  primary_power: string; krakoan_function: string; is_mutant: boolean; faction_name?: string
+}
+export interface RosterFaction { faction_name: string; description: string; characters: RosterEntry[] }
+export interface Roster { era: string; total_characters: number; factions: RosterFaction[]; source_note: string }

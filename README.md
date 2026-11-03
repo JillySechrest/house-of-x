@@ -14,6 +14,10 @@ Marvel's public API is retired, so the default is **demo mode**: a small local m
 
 Run it as a separate process: `scripts/run-mock.sh` (or `scripts/run-mock.ps1`), port 8001. To use a real Marvel-compatible source if one returns, empty `MARVEL_BASE_URL` (default `https://gateway.marvel.com/v1/public`) and set your own keys.
 
+## Roster data
+
+`apps/api/fixtures/krakoan_roster.json` is a roster of factions and characters supplied with the project (not from Marvel). `GET /api/roster` serves it without a Marvel call or keys; the UI shows it at `/roster` and on matching character pages, labelled as supplied data. Entries match Marvel characters by alias or name (Kate/Kitty Pryde are treated alike). The file's `total_characters` is recomputed from the factions on load. Cleanup versus the pasted source: stray text removed and `&amp;` unescaped.
+
 ## Environment variables
 
 Copy `.env.example` to `.env` (the setup scripts do this) and fill in:

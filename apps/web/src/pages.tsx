@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
-import type { Attribution, Character, Comic, Shelf } from './api'
+import type { Attribution, Character, Comic, Roster, RosterEntry, Shelf } from './api'
 import { useApi } from './api'
 import { ComicList, Layout, Status, Thumb } from './components'
 
@@ -78,15 +78,28 @@ export function ComicDetail() {
 
 export function CharacterDetail() {
   const { id } = useParams()
-  const state = useApi<{ character: Character; comics: Comic[]; attribution: Attribution }>(`/api/characters/${id}`)
+  const state = useApi<{ character: Character; roster: RosterEntry | null; comics: Comic[]; attribution: Attribution }>(`/api/characters/${id}`)
   return (
     <Layout attribution={state.status === 'ok' ? state.data.attribution : null}>
       <Status state={state}>
-        {({ character: c, comics }) => (
+        {({ character: c, roster, comics }) => (
           <>
             <h1>{c.name}</h1>
             <Thumb src={c.thumbnail} alt={c.name} large />
             <p>{c.description ?? 'No description from Marvel.'}</p>
+            {roster && (
+              <>
+                <h2>Krakoan roster entry</h2>
+                <p className="muted">Supplied project data, not from Marvel.</p>
+                <dl>
+                  <dt>Name</dt><dd>{roster.name} ({roster.alias})</dd>
+                  <dt>Faction</dt><dd>{roster.faction_name}</dd>
+                  <dt>Role</dt><dd>{roster.role}</dd>
+                  <dt>Primary power</dt><dd>{roster.primary_power}</dd>
+                  <dt>Krakoan function</dt><dd>{roster.krakoan_function}</dd>
+                </dl>
+              </>
+            )}
             <h2>On the Hickman shelves</h2>
             <ComicList comics={comics} />
           </>
@@ -126,6 +139,41 @@ export function Search() {
           )}
         </Status>
       )}
+      <p><Link to="/">Back to the main shelf</Link></p>
+    </Layout>
+  )
+}
+
+export function RosterPage() {
+  const state = useApi<Roster>('/api/roster')
+  return (
+    <Layout attribution={state.status === 'ok' ? { text: state.data.source_note } : null}>
+      <h1>Krakoan roster</h1>
+      <Status state={state}>
+        {(d) => (
+          <>
+            <p className="muted">{d.era} · {d.total_characters} entries</p>
+            {d.factions.map((f) => (
+              <section key={f.faction_name}>
+                <h2>{f.faction_name}</h2>
+                <p>{f.description}</p>
+                <ul className="list">
+                  {f.characters.map((c) => (
+                    <li key={c.id}>
+                      <div>
+                        <strong>{c.alias}</strong> ({c.name})
+                        <div className="muted">{c.council_seat ? `${c.council_seat} · ` : ''}{c.role}</div>
+                        <div>{c.primary_power}</div>
+                        <div>{c.krakoan_function}</div>
+                      </div>
+                    </li>
+                  ))}
+                </ul>
+              </section>
+            ))}
+          </>
+        )}
+      </Status>
       <p><Link to="/">Back to the main shelf</Link></p>
     </Layout>
   )

@@ -1,0 +1,56 @@
+{
+  "era": "Krakoan Era (House of X / Powers of X)",
+  "source_continuity": "Earth-616",
+  "total_characters": 25,
+  "factions": [
+    {
+      "faction_name": "The Quiet Council",
+      "description": "The supreme executive, legislative, and judicial governing branch of Krakoa.",
+      "characters": [
+        {"id": "char_prof_x", "name": "Charles Xavier", "alias": "Professor X", "council_seat": "Autumn Table", "role": "Head of State / Archivist", "primary_power": "Alpha-Level Telepathy", "krakoan_function": "Manages the global Cerebro network to maintain up-to-date mutant mind-backups for resurrection.", "is_mutant": true},
+        {"id": "char_magneto", "name": "Max Eisenhardt", "alias": "Magneto", "council_seat": "Autumn Table", "role": "Head of State / Chief Diplomat", "primary_power": "Omega-Level Magnetism", "krakoan_function": "Acts as the nation's primary geopolitical defender and official voice to human governments.", "is_mutant": true},
+        {"id": "char_apocalypse", "name": "En Sabah Nur", "alias": "Apocalypse", "council_seat": "Autumn Table", "role": "Occultist / External Historian", "primary_power": "Molecular Rearrangement & External Energy Manipulation", "krakoan_function": "Drives Krakoan external magic systems and facilitates reunification with the lost continent of Arakko.", "is_mutant": true},
+        {"id": "char_mr_sinister", "name": "Nathaniel Essex", "alias": "Mister Sinister", "council_seat": "Winter Table", "role": "Master Geneticist", "primary_power": "Cellular Regeneration / Stolen Mutant DNA Telepathy", "krakoan_function": "Maintains the complete, definitive mutant DNA catalog necessary to clone bodies for resurrection.", "is_mutant": true},
+        {"id": "char_mystique", "name": "Raven Darkhölme", "alias": "Mystique", "council_seat": "Winter Table", "role": "Covert Operative", "primary_power": "Metamorphic Shapeshifting", "krakoan_function": "Executes state-mandated espionage while secretly working to resurrect her wife, Destiny.", "is_mutant": true},
+        {"id": "char_exodus", "name": "Bennet du Paris", "alias": "Exodus", "council_seat": "Winter Table", "role": "Religious Leader / Zealot", "primary_power": "Omega-Level Telekinesis / Telepathy", "krakoan_function": "Spreads Krakoan exceptionalism, cultural dogma, and religious mythology to the young mutant population.", "is_mutant": true},
+        {"id": "char_emma_frost", "name": "Emma Frost", "alias": "White Queen", "council_seat": "Spring Table", "role": "Trade & Finance Ambassador", "primary_power": "Alpha-Level Telepathy / Organic Diamond Form", "krakoan_function": "Heads the Hellfire Trading Company; manages the legal export of life-saving Krakoan pharmaceuticals.", "is_mutant": true},
+        {"id": "char_sebastian_shaw", "name": "Sebastian Shaw", "alias": "Black King", "council_seat": "Spring Table", "role": "Black Market Logistics", "primary_power": "Kinetic Energy Absorption & Redirection", "krakoan_function": "Runs illicit distribution channels to smuggle Krakoan medicines into non-treaty human nations.", "is_mutant": true},
+        {"id": "char_kate_pryde", "name": "Kate Pryde", "alias": "Red Queen", "council_seat": "Spring Table", "role": "Maritime Rescue & Enforcement", "primary_power": "Intangibility / Matter Phasing", "krakoan_function": "Commands the Marauders to liberate and smuggle mutants physically trapped by hostile human regimes.", "is_mutant": true},
+        {"id": "char_storm", "name": "Ororo Munroe", "alias": "Storm", "council_seat": "Summer Table", "role": "Interstellar Voice", "primary_power": "Omega-Level Atmokinesis", "krakoan_function": "Serves as Regent of Arakko (Mars), representing mutantkind's expansion on a cosmic scale.", "is_mutant": true},
+        {"id": "char_jean_grey", "name": "Jean Grey", "alias": "Marvel Girl", "council_seat": "Summer Table", "role": "Field Captain / Moral Anchor", "primary_power": "Omega-Level Telekinesis / Alpha Telepathy", "krakoan_function": "Balances pragmatism with classic X-Men morality; serves as elite field enforcement.", "is_mutant": true},
+        {"id": "char_nightcrawler", "name": "Kurt Wagner", "alias": "Nightcrawler", "council_seat": "Summer Table", "role": "Spiritual Judiciary", "primary_power": "Spatial Teleportation", "krakoan_function": "Drafts Krakoan jurisprudence, legal ethics, and pioneers the mutant nation's cultural philosophy.", "is_mutant": true},
+        {"id": "char_cypher", "name": "Doug Ramsey", "alias": "Cypher", "council_seat": "Adjunct (Non-voting)", "role": "Sovereign Interpreter", "primary_power": "Omnilingualism (Universal Translation)", "krakoan_function": "The sole communications link capable of translating, speaking with, and mapping the living island.", "is_mutant": true},
+        {"id": "char_krakoa", "name": "Krakoa", "alias": "The Living Island", "council_seat": "Adjunct (Non-voting)", "role": "Sovereign Ecosystem", "primary_power": "Bio-Organic Mutagenic Sentience", "krakoan_function": "The living, breathing landmass that acts as the physical, structural home of the mutant race.", "is_mutant": true}
+      ]
+    },
+    {
+      "faction_name": "The Five",
+      "description": "The biological collective whose unified mutant circuits achieve perfect mutant resurrection.",
+      "characters": [
+        {"id": "char_hope_summers", "name": "Hope Summers", "alias": "The Catalyst", "role": "Circuit Core / Multiplier", "primary_power": "Omega-Level Power Mimicry & Manipulation", "krakoan_function": "Unifies, synchronizes, and boosts the powers of the other four members to make the loop possible.", "is_mutant": true},
+        {"id": "char_egg", "name": "Fabio Medina", "alias": "Egg (formerly Goldballs)", "role": "The Vessel", "primary_power": "Goldball Generation (Biological Bio-Eggs)", "krakoan_function": "Produces hollow, biological, organic eggs that serve as incubation pods for cloning mutant husks.", "is_mutant": true},
+        {"id": "char_proteus", "name": "Kevin MacTaggert", "alias": "Proteus", "role": "The Animator", "primary_power": "Alpha-Level Reality Warping", "krakoan_function": "Alters physical reality to make unviable biological shells compatible with baseline mutant physiology.", "is_mutant": true},
+        {"id": "char_elixir", "name": "Joshua Foley", "alias": "Elixir", "role": "The Biologist", "primary_power": "Omega-Level Biokinesis", "krakoan_function": "Triggers rapid cell replication, mapping correct genetic strains to spark cellular life.", "is_mutant": true},
+        {"id": "char_tempest", "name": "Eva Bell", "alias": "Tempest", "role": "The Incubator", "primary_power": "Chronokinesis (Time Manipulation)", "krakoan_function": "Generates localized temporal bubbles to age the cloned body rapidly to its exact age of death.", "is_mutant": true}
+      ]
+    },
+    {
+      "faction_name": "The Great Captains",
+      "description": "Military commanders vested with complete tactical control during active combat operations.",
+      "characters": [
+        {"id": "char_cyclops", "name": "Scott Summers", "alias": "Cyclops", "role": "Captain Commander", "primary_power": "Optic Blast Projection", "krakoan_function": "Chief strategist of Krakoa; holds veto power over the Quiet Council during martial law emergencies.", "is_mutant": true},
+        {"id": "char_magik", "name": "Illyana Rasputina", "alias": "Magik", "role": "Great Captain", "primary_power": "Interdimensional Stepping Discs / Eldritch Magic", "krakoan_function": "Manages massive troop routing and instant spatial deployment using her Limbo teleportation gates.", "is_mutant": true},
+        {"id": "char_bishop", "name": "Lucas Bishop", "alias": "Bishop", "role": "Great Captain", "primary_power": "Energy Absorption & Re-emission", "krakoan_function": "Structures internal defense parameters, threat-mapping, and domestic perimeter protection.", "is_mutant": true},
+        {"id": "char_gorgon", "name": "Tomi Shishido", "alias": "Gorgon", "role": "Great Captain", "primary_power": "Petrifying Stare / Superhuman Conditioning", "krakoan_function": "Acts as elite physical security defense detail for diplomatic envoys traveling abroad.", "is_mutant": true}
+      ]
+    },
+    {
+      "faction_name": "Foundational Architects",
+      "description": "The hidden minds behind Krakoa's structural framework.",
+      "characters": [
+        {"id": "char_moira_x", "name": "Moira MacTaggert", "alias": "Moira X", "role": "The Structural Blueprinter", "primary_power": "Reincarnation via Timeline Reset", "krakoan_function": "Uses foresight from 9 past failed lives to architect the survival loop of Krakoa alongside Xavier and Magneto.", "is_mutant": true},
+        {"id": "char_forge", "name": "Forge", "alias": "Forge", "role": "Chief Systems Engineer", "primary_power": "Intuitive Cybernetic Invention", "krakoan_function": "Re-engineered the global Cerebro database to scale across planetary servers, handling millions of mutant soul-backups.", "is_mutant": true}
+      ]
+    }
+  ]
+}

@@ -9,6 +9,7 @@ from .cache import Cache
 from .config import MissingKeysError, cache_path, load_settings
 from .marvel import MarvelClient, MarvelUnavailableError
 from .models import Character, Scope
+from .roster import find_entry, load_roster
 from .scope import AmbiguousCreatorError, CreatorNotResolvedError, get_scope, thumbnail_url
 
 app = FastAPI(title="House of X API")
@@ -63,6 +64,12 @@ def health():
     return {"status": "ok"}
 
 
+@app.get("/api/roster")
+def roster():
+    """Supplied roster fixture. No Marvel call, so no keys needed."""
+    return load_roster()
+
+
 @app.get("/api/shelves")
 def shelves(scope: Scope = Depends(scope_dep)):
     return {
@@ -107,7 +114,7 @@ def character(character_id: int, client: MarvelClient = Depends(get_client), sco
                 thumbnail=thumbnail_url(results[0].get("thumbnail")),
             )
     in_scope = [c for c in scope.comics if character_id in c.character_ids]
-    return {"character": found, "comics": in_scope, "attribution": scope.attribution}
+    return {"character": found, "roster": find_entry(found.name), "comics": in_scope, "attribution": scope.attribution}
 
 
 @app.get("/api/search")
