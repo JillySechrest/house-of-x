@@ -2,17 +2,24 @@
 
 A small local catalog of Jonathan Hickman's X-Men, weighted toward the work after *House of X* (2019). Python API (FastAPI), React UI (Vite).
 
-"House of X" is this demo's name, not a claim of ownership. All titles, credits, descriptions, dates and images come from the Marvel developer API and are displayed as returned. Nothing here is a summary or retelling of the stories.
+Agents: start with [AGENTS.md](AGENTS.md), then read [PLAN.md](PLAN.md). Future harness work is in [docs/harness-roadmap.md](docs/harness-roadmap.md), with executable work items in [docs/harness-backlog.json](docs/harness-backlog.json).
 
-## Marvel attribution
+"House of X" is this demo's name, not a claim of ownership. **Marvel's public API is retired.** Catalog and roster data are committed JSON fixtures, not a live Marvel feed. Do not add a `gateway.marvel.com` client.
 
-Every page that renders Marvel data shows the `attributionText` the API returns, beside the site name (header and footer). Marvel's data is fetched server-side only; the private key never reaches the browser, logs, or git. Responses are cached in SQLite (`apps/api/.cache/`, git-ignored) with a 24 hour TTL (`CACHE_TTL_SECONDS` in `apps/api/app/config.py`). Check the current Marvel developer terms and change that constant if they differ. Do not publish a mirror of the catalog.
+## Data and attribution
 
-## Demo mode vs real Marvel
+Canonical files:
 
-Marvel's public API is retired, so the default is **demo mode**: a small local mock gateway (`apps/api/mock_marvel/`) serves Marvel-shaped JSON from `apps/api/fixtures/marvel_sample.json`. **That fixture is hand-authored sample data, not Marvel's.** It carries its own attribution line saying so, and it includes edge cases (a non-writer credit, a missing description, a missing image, an out-of-window issue, an unresolvable series). The catalog code path is identical in both modes; only `MARVEL_BASE_URL` changes. The mock checks `ts`/`apikey`/`hash` like Marvel did, using throwaway demo keys.
+- `apps/api/fixtures/krakoan_roster.json` — factions/characters, loaded in-process. Labelled as supplied data, not Marvel.
+- `apps/api/fixtures/marvel_sample.json` — hand-authored Marvel-*shaped* sample catalog (not Marvel's). Attribution line says so.
 
-Run it as a separate process: `scripts/run-mock.sh` (or `scripts/run-mock.ps1`), port 8001. To use a real Marvel-compatible source if one returns, empty `MARVEL_BASE_URL` (default `https://gateway.marvel.com/v1/public`) and set your own keys.
+Every page that renders catalog data shows that sample `attributionText` beside the site name (header and footer). Do not publish a mirror presented as Marvel.
+
+## Catalog shim (temporary)
+
+Catalog routes still talk HTTP to a local mock (`apps/api/mock_marvel/`) that serves `marvel_sample.json` on port 8001. The mock checks `ts`/`apikey`/`hash` with throwaway demo keys so the old client code still runs. That is a shim to retire (load JSON in-process like the roster). Do not point `MARVEL_BASE_URL` at Marvel.
+
+Run the mock: `scripts/run-mock.sh` (or `scripts/run-mock.ps1`). The fixture includes edge cases (a non-writer credit, a missing description, a missing image, an out-of-window issue, an unresolvable series).
 
 ## Roster data
 
@@ -20,13 +27,7 @@ Run it as a separate process: `scripts/run-mock.sh` (or `scripts/run-mock.ps1`),
 
 ## Environment variables
 
-Copy `.env.example` to `.env` (the setup scripts do this) and fill in:
-
-- `MARVEL_BASE_URL` (optional; demo default points at the mock)
-- `MARVEL_PUBLIC_KEY`
-- `MARVEL_PRIVATE_KEY`
-
-Catalog routes return 503 with a plain message if either is missing; `/api/health` works without them.
+Copy `.env.example` to `.env` (the setup scripts do this). Demo `MARVEL_*` values are throwaways for the mock shim only — there are no real Marvel keys. Catalog routes still return 503 if those env vars are missing; `/api/health` and `/api/roster` work without them.
 The web app reads `VITE_API_BASE` (default `http://localhost:8000`; see `apps/web/.env.example`).
 
 ## Setup (Python 3.12, Node 22)
