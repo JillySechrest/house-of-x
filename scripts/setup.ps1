@@ -11,4 +11,4 @@ npm ci
 if ($LASTEXITCODE -ne 0) { Pop-Location; throw "npm ci failed" }
 Pop-Location
 if (-not (Test-Path .env)) { Copy-Item .env.example .env }
-Write-Host "Setup complete. Add your Marvel keys to .env."
+Write-Host "Setup complete. The mock shim needs placeholder MARVEL_* values in .env; no real Marvel keys exist."

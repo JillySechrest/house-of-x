@@ -7,4 +7,4 @@ python3.12 -m venv .venv 2>/dev/null || python3 -m venv .venv
 .venv/bin/python -m pip install -e "apps/api[dev]"
 (cd apps/web && npm ci)
 [ -f .env ] || cp .env.example .env
-echo "Setup complete. Add your Marvel keys to .env."
+echo "Setup complete. The mock shim needs placeholder MARVEL_* values in .env; no real Marvel keys exist."
