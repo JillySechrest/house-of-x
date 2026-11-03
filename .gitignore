@@ -218,3 +218,8 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# House of X
+node_modules/
+apps/api/.cache/
+*.sqlite3
