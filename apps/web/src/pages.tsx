@@ -91,6 +91,7 @@ export function CharacterDetail() {
               <>
                 <h2>Krakoan roster entry</h2>
                 <p className="muted">Supplied project data, not from Marvel.</p>
+                {roster.bio && <p>{roster.bio}</p>}
                 <dl>
                   <dt>Name</dt><dd>{roster.name} ({roster.alias})</dd>
                   <dt>Faction</dt><dd>{roster.faction_name}</dd>
@@ -163,6 +164,7 @@ export function RosterPage() {
                       <div>
                         <strong>{c.alias}</strong> ({c.name})
                         <div className="muted">{c.council_seat ? `${c.council_seat} · ` : ''}{c.role}</div>
+                        {c.bio && <p>{c.bio}</p>}
                         <div>{c.primary_power}</div>
                         <div>{c.krakoan_function}</div>
                       </div>

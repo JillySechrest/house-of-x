@@ -92,3 +92,9 @@ def test_roster_matching():
     assert find_entry("Professor X")["id"] == "char_prof_x"
     assert find_entry("Kitty Pryde")["id"] == "char_kate_pryde"
     assert find_entry("Nobody") is None
+
+
+def test_roster_has_bios():
+    body = TestClient(app).get("/api/roster").json()
+    chars = [c for f in body["factions"] for c in f["characters"]]
+    assert all(c.get("bio") for c in chars)
