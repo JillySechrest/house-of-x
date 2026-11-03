@@ -2,6 +2,7 @@
 import re
 from typing import Any
 
+from .config import marvel_base_url
 from .marvel import MarvelClient
 from .models import Attribution, Character, Comic, CreatorCredit, Scope, SeriesRef, Shelf
 
@@ -201,9 +202,10 @@ def build_scope(client: MarvelClient) -> Scope:
 
 
 def get_scope(client: MarvelClient) -> Scope:
-    cached = client.cache.get(SCOPE_CACHE_KEY)
+    key = f"{marvel_base_url()}:{SCOPE_CACHE_KEY}"
+    cached = client.cache.get(key)
     if cached is not None:
         return Scope.model_validate(cached)
     scope = build_scope(client)
-    client.cache.set(SCOPE_CACHE_KEY, scope.model_dump())
+    client.cache.set(key, scope.model_dump())
     return scope

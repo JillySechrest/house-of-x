@@ -1,0 +1,574 @@
+{
+ "_note": "SAMPLE DATA for the House of X demo. Not provided by Marvel. Marvel's public API is retired.",
+ "attributionText": "Sample data for the House of X demo - not provided by Marvel.",
+ "attributionHTML": "<a href=\"#\">Sample data for the House of X demo - not provided by Marvel.</a>",
+ "creators": [
+  {
+   "id": 1001,
+   "fullName": "Jonathan Hickman",
+   "firstName": "Jonathan",
+   "lastName": "Hickman"
+  }
+ ],
+ "series": [
+  {
+   "id": 101,
+   "title": "House of X (2019 - 2019)",
+   "startYear": 2019
+  },
+  {
+   "id": 102,
+   "title": "Powers of X (2019 - 2019)",
+   "startYear": 2019
+  },
+  {
+   "id": 103,
+   "title": "X-Men (2019 - 2021)",
+   "startYear": 2019
+  },
+  {
+   "id": 104,
+   "title": "Giant-Size X-Men (2020 - 2020)",
+   "startYear": 2020
+  },
+  {
+   "id": 105,
+   "title": "Sample Other Series (2019 - 2019)",
+   "startYear": 2019
+  }
+ ],
+ "comics": [
+  {
+   "id": 5001,
+   "title": "House of X (2019) #1",
+   "issueNumber": 1,
+   "description": null,
+   "format": "Comic",
+   "dates": [
+    {
+     "type": "onsaleDate",
+     "date": "2019-07-24T00:00:00-0500"
+    }
+   ],
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/00/sample5001",
+    "extension": "jpg"
+   },
+   "series": {
+    "resourceURI": "http://gateway.marvel.com/v1/public/series/101",
+    "name": "House of X (2019)"
+   },
+   "creators": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/creators/1001",
+      "name": "Jonathan Hickman",
+      "role": "writer"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/creators/1002",
+      "name": "Sample Artist",
+      "role": "penciller"
+     }
+    ]
+   },
+   "characters": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2001",
+      "name": "Professor X"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2002",
+      "name": "Magneto"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2003",
+      "name": "Cyclops"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2004",
+      "name": "Jean Grey"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2005",
+      "name": "Storm"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2007",
+      "name": "Emma Frost"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5002,
+   "title": "House of X (2019) #2",
+   "issueNumber": 2,
+   "description": "[Sample placeholder - description not available]",
+   "format": "Comic",
+   "dates": [
+    {
+     "type": "onsaleDate",
+     "date": "2019-08-14T00:00:00-0500"
+    }
+   ],
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+    "extension": "jpg"
+   },
+   "series": {
+    "resourceURI": "http://gateway.marvel.com/v1/public/series/101",
+    "name": "House of X (2019)"
+   },
+   "creators": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/creators/1001",
+      "name": "Jonathan Hickman",
+      "role": "writer"
+     }
+    ]
+   },
+   "characters": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2001",
+      "name": "Professor X"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2002",
+      "name": "Magneto"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2008",
+      "name": "Nightcrawler"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5003,
+   "title": "Powers of X (2019) #1",
+   "issueNumber": 1,
+   "description": null,
+   "format": "Comic",
+   "dates": [
+    {
+     "type": "onsaleDate",
+     "date": "2019-08-07T00:00:00-0500"
+    }
+   ],
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/00/sample5003",
+    "extension": "jpg"
+   },
+   "series": {
+    "resourceURI": "http://gateway.marvel.com/v1/public/series/102",
+    "name": "Powers of X (2019)"
+   },
+   "creators": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/creators/1001",
+      "name": "Jonathan Hickman",
+      "role": "writer"
+     }
+    ]
+   },
+   "characters": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2001",
+      "name": "Professor X"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2002",
+      "name": "Magneto"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2010",
+      "name": "Moira MacTaggert"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2011",
+      "name": "Apocalypse"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5004,
+   "title": "X-Men (2019) #1",
+   "issueNumber": 1,
+   "description": null,
+   "format": "Comic",
+   "dates": [
+    {
+     "type": "onsaleDate",
+     "date": "2019-10-09T00:00:00-0500"
+    }
+   ],
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/00/sample5004",
+    "extension": "jpg"
+   },
+   "series": {
+    "resourceURI": "http://gateway.marvel.com/v1/public/series/103",
+    "name": "X-Men (2019)"
+   },
+   "creators": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/creators/1001",
+      "name": "Jonathan Hickman",
+      "role": "writer"
+     }
+    ]
+   },
+   "characters": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2001",
+      "name": "Professor X"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2003",
+      "name": "Cyclops"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2004",
+      "name": "Jean Grey"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2005",
+      "name": "Storm"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2006",
+      "name": "Wolverine"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2012",
+      "name": "Kitty Pryde"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5005,
+   "title": "X-Men (2019) #2",
+   "issueNumber": 2,
+   "description": null,
+   "format": "Comic",
+   "dates": [
+    {
+     "type": "onsaleDate",
+     "date": "2019-10-30T00:00:00-0500"
+    }
+   ],
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/00/sample5005",
+    "extension": "jpg"
+   },
+   "series": {
+    "resourceURI": "http://gateway.marvel.com/v1/public/series/103",
+    "name": "X-Men (2019)"
+   },
+   "creators": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/creators/1002",
+      "name": "Sample Artist",
+      "role": "writer"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/creators/1001",
+      "name": "Jonathan Hickman",
+      "role": "penciller"
+     }
+    ]
+   },
+   "characters": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2009",
+      "name": "Mystique"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5006,
+   "title": "Giant-Size X-Men (2020) #1",
+   "issueNumber": 1,
+   "description": null,
+   "format": "Comic",
+   "dates": [
+    {
+     "type": "onsaleDate",
+     "date": "2020-01-22T00:00:00-0500"
+    }
+   ],
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/00/sample5006",
+    "extension": "jpg"
+   },
+   "series": {
+    "resourceURI": "http://gateway.marvel.com/v1/public/series/104",
+    "name": "Giant-Size X-Men (2020)"
+   },
+   "creators": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/creators/1001",
+      "name": "Jonathan Hickman",
+      "role": "writer"
+     }
+    ]
+   },
+   "characters": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2004",
+      "name": "Jean Grey"
+     },
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2007",
+      "name": "Emma Frost"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5007,
+   "title": "Sample Other Series (2019) #1",
+   "issueNumber": 1,
+   "description": null,
+   "format": "Comic",
+   "dates": [
+    {
+     "type": "onsaleDate",
+     "date": "2019-12-04T00:00:00-0500"
+    }
+   ],
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/00/sample5007",
+    "extension": "jpg"
+   },
+   "series": {
+    "resourceURI": "http://gateway.marvel.com/v1/public/series/105",
+    "name": "Sample Other Series (2019)"
+   },
+   "creators": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/creators/1001",
+      "name": "Jonathan Hickman",
+      "role": "writer"
+     }
+    ]
+   },
+   "characters": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2013",
+      "name": "Sample Unlisted Character"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5008,
+   "title": "Sample Other Series (2019) #9",
+   "issueNumber": 9,
+   "description": null,
+   "format": "Comic",
+   "dates": [
+    {
+     "type": "onsaleDate",
+     "date": "2023-01-04T00:00:00-0500"
+    }
+   ],
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/00/sample5008",
+    "extension": "jpg"
+   },
+   "series": {
+    "resourceURI": "http://gateway.marvel.com/v1/public/series/105",
+    "name": "Sample Other Series (2019)"
+   },
+   "creators": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/creators/1001",
+      "name": "Jonathan Hickman",
+      "role": "writer"
+     }
+    ]
+   },
+   "characters": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2013",
+      "name": "Sample Unlisted Character"
+     }
+    ]
+   }
+  },
+  {
+   "id": 5009,
+   "title": "Sample Other Series (2019) #2",
+   "issueNumber": 2,
+   "description": null,
+   "format": "Comic",
+   "dates": [
+    {
+     "type": "onsaleDate",
+     "date": "2019-12-18T00:00:00-0500"
+    }
+   ],
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/c/00/sample5009",
+    "extension": "jpg"
+   },
+   "series": {
+    "resourceURI": "http://gateway.marvel.com/v1/public/series/105",
+    "name": "Sample Other Series (2019)"
+   },
+   "creators": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/creators/1002",
+      "name": "Sample Artist",
+      "role": "writer"
+     }
+    ]
+   },
+   "characters": {
+    "items": [
+     {
+      "resourceURI": "http://gateway.marvel.com/v1/public/characters/2006",
+      "name": "Wolverine"
+     }
+    ]
+   }
+  }
+ ],
+ "characters": [
+  {
+   "id": 2001,
+   "name": "Professor X",
+   "description": "",
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+    "extension": "jpg"
+   }
+  },
+  {
+   "id": 2002,
+   "name": "Magneto",
+   "description": "",
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+    "extension": "jpg"
+   }
+  },
+  {
+   "id": 2003,
+   "name": "Cyclops",
+   "description": "",
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+    "extension": "jpg"
+   }
+  },
+  {
+   "id": 2004,
+   "name": "Jean Grey",
+   "description": "",
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+    "extension": "jpg"
+   }
+  },
+  {
+   "id": 2005,
+   "name": "Storm",
+   "description": "",
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+    "extension": "jpg"
+   }
+  },
+  {
+   "id": 2006,
+   "name": "Wolverine",
+   "description": "",
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+    "extension": "jpg"
+   }
+  },
+  {
+   "id": 2007,
+   "name": "Emma Frost",
+   "description": "",
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+    "extension": "jpg"
+   }
+  },
+  {
+   "id": 2008,
+   "name": "Nightcrawler",
+   "description": "",
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+    "extension": "jpg"
+   }
+  },
+  {
+   "id": 2009,
+   "name": "Mystique",
+   "description": "",
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+    "extension": "jpg"
+   }
+  },
+  {
+   "id": 2010,
+   "name": "Moira MacTaggert",
+   "description": "",
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+    "extension": "jpg"
+   }
+  },
+  {
+   "id": 2011,
+   "name": "Apocalypse",
+   "description": "",
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+    "extension": "jpg"
+   }
+  },
+  {
+   "id": 2012,
+   "name": "Kitty Pryde",
+   "description": "",
+   "thumbnail": {
+    "path": "http://i.annihil.us/u/prod/marvel/i/mg/b/40/image_not_available",
+    "extension": "jpg"
+   }
+  },
+  {
+   "id": 2013,
+   "name": "Sample Unlisted Character",
+   "description": "",
+   "thumbnail": null
+  }
+ ]
+}

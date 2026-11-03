@@ -8,7 +8,7 @@ from typing import Any
 import httpx
 
 from .cache import Cache
-from .config import HTTP_TIMEOUT_SECONDS, MARVEL_BASE_URL, Settings
+from .config import HTTP_TIMEOUT_SECONDS, Settings, marvel_base_url
 
 # httpx logs full request URLs (including auth params) at INFO.
 logging.getLogger("httpx").setLevel(logging.WARNING)
@@ -27,7 +27,7 @@ class MarvelClient:
     def __init__(self, settings: Settings, cache: Cache, transport: httpx.BaseTransport | None = None):
         self.settings = settings
         self.cache = cache
-        self._http = httpx.Client(base_url=MARVEL_BASE_URL, timeout=HTTP_TIMEOUT_SECONDS, transport=transport)
+        self._http = httpx.Client(base_url=marvel_base_url(), timeout=HTTP_TIMEOUT_SECONDS, transport=transport)
 
     def close(self) -> None:
         self._http.close()
@@ -35,7 +35,7 @@ class MarvelClient:
     def get(self, path: str, params: dict[str, Any] | None = None) -> dict[str, Any]:
         """Return the Marvel response envelope for a path, using the cache when fresh."""
         params = params or {}
-        key = f"{path}?{json.dumps(params, sort_keys=True)}"
+        key = f"{marvel_base_url()}{path}?{json.dumps(params, sort_keys=True)}"
         cached = self.cache.get(key)
         if cached is not None:
             return cached

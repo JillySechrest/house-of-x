@@ -8,10 +8,17 @@ A small local catalog of Jonathan Hickman's X-Men, weighted toward the work afte
 
 Every page that renders Marvel data shows the `attributionText` the API returns, beside the site name (header and footer). Marvel's data is fetched server-side only; the private key never reaches the browser, logs, or git. Responses are cached in SQLite (`apps/api/.cache/`, git-ignored) with a 24 hour TTL (`CACHE_TTL_SECONDS` in `apps/api/app/config.py`). Check the current Marvel developer terms and change that constant if they differ. Do not publish a mirror of the catalog.
 
+## Demo mode vs real Marvel
+
+Marvel's public API is retired, so the default is **demo mode**: a small local mock gateway (`apps/api/mock_marvel/`) serves Marvel-shaped JSON from `apps/api/fixtures/marvel_sample.json`. **That fixture is hand-authored sample data, not Marvel's.** It carries its own attribution line saying so, and it includes edge cases (a non-writer credit, a missing description, a missing image, an out-of-window issue, an unresolvable series). The catalog code path is identical in both modes; only `MARVEL_BASE_URL` changes. The mock checks `ts`/`apikey`/`hash` like Marvel did, using throwaway demo keys.
+
+Run it as a separate process: `scripts/run-mock.sh` (or `scripts/run-mock.ps1`), port 8001. To use a real Marvel-compatible source if one returns, empty `MARVEL_BASE_URL` (default `https://gateway.marvel.com/v1/public`) and set your own keys.
+
 ## Environment variables
 
 Copy `.env.example` to `.env` (the setup scripts do this) and fill in:
 
+- `MARVEL_BASE_URL` (optional; demo default points at the mock)
 - `MARVEL_PUBLIC_KEY`
 - `MARVEL_PRIVATE_KEY`
 
@@ -28,6 +35,9 @@ Both create `.venv`, install the API with dev extras, and run `npm ci` in `apps/
 ## Run
 
 ```
+# Mock Marvel gateway (demo mode)
+scripts/run-mock.sh
+
 # API (from the repo root)
 .venv/bin/uvicorn app.main:app --app-dir apps/api --port 8000   # Windows: .venv\Scripts\uvicorn
 

@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 REPO_ROOT = Path(__file__).resolve().parents[3]
 load_dotenv(REPO_ROOT / ".env")
 
-MARVEL_BASE_URL = "https://gateway.marvel.com/v1/public"
+DEFAULT_MARVEL_BASE_URL = "https://gateway.marvel.com/v1/public"
 # Default is 24 hours. Check the current Marvel developer terms and change this
 # constant if they differ.
 CACHE_TTL_SECONDS = 24 * 60 * 60
@@ -34,6 +34,10 @@ def load_settings() -> Settings:
             "MARVEL_PRIVATE_KEY in the server environment (see .env.example)."
         )
     return Settings(public_key=public, private_key=private)
+
+
+def marvel_base_url() -> str:
+    return os.environ.get("MARVEL_BASE_URL", "").strip() or DEFAULT_MARVEL_BASE_URL
 
 
 def cache_path() -> Path:
