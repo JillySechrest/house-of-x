@@ -223,3 +223,9 @@ __marimo__/
 node_modules/
 apps/api/.cache/
 *.sqlite3
+
+# Internal harness files. Keep these local; public project docs remain trackable.
+AGENTS.md
+PLAN.md
+docs/harness-*.md
+docs/harness-*.json
